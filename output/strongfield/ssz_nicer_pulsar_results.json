@@ -1,0 +1,64 @@
+{
+  "analysis": "NICER Neutron Star SSZ Test",
+  "timestamp": "2025-12-09T00:28:40.792041",
+  "pulsars": {
+    "J0030+0451": {
+      "pulsar": "PSR J0030+0451",
+      "parameters": {
+        "mass_msun": 1.44,
+        "mass_err": 0.15,
+        "radius_km": 13.02,
+        "radius_err": 1.15,
+        "period_ms": 4.87
+      },
+      "compactness": {
+        "value": 0.16335526653406995,
+        "error": 0.022309877589888793,
+        "gm_rc2": 0.16335526653406995
+      },
+      "gr_prediction": {
+        "z_surface": 0.2187063944159917,
+        "z_surface_err": 0.040382616709177144,
+        "time_dilation": 0.8205421786427923
+      },
+      "ssz_test": {
+        "delta_seg_inferred": 0.0,
+        "delta_seg_upper_bound": 0.1846430545252699,
+        "delta_seg_upper_bound_percent": 18.46430545252699,
+        "note": "NICER M-R consistent with GR; SSZ bounded by measurement precision"
+      }
+    },
+    "J0740+6620": {
+      "pulsar": "PSR J0740+6620",
+      "parameters": {
+        "mass_msun": 2.08,
+        "mass_err": 0.07,
+        "radius_km": 12.39,
+        "radius_err": 1.14,
+        "period_ms": 2.89
+      },
+      "compactness": {
+        "value": 0.2479554516505846,
+        "error": 0.02429250264528988,
+        "gm_rc2": 0.2479554516505846
+      },
+      "gr_prediction": {
+        "z_surface": 0.4084659363333971,
+        "z_surface_err": 0.06787522822502481,
+        "time_dilation": 0.709992321577375
+      },
+      "ssz_test": {
+        "delta_seg_inferred": 0.0,
+        "delta_seg_upper_bound": 0.16617108597673577,
+        "delta_seg_upper_bound_percent": 16.617108597673578,
+        "note": "NICER M-R consistent with GR; SSZ bounded by measurement precision"
+      }
+    }
+  },
+  "combined": {
+    "best_upper_bound": 0.16617108597673577,
+    "best_upper_bound_percent": 16.617108597673578,
+    "source": "J0740+6620",
+    "note": "Tightest constraint from highest compactness NS"
+  }
+}

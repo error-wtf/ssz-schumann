@@ -1,0 +1,20 @@
+{
+  "timestamp": "2025-12-08T04:40:01.651016",
+  "classical": {
+    "f1_mean": 7.829796821298381,
+    "f2_mean": 14.301193715676966,
+    "f3_mean": 20.79834823398531,
+    "eta_mean": 0.7735136058772415
+  },
+  "ssz": {
+    "mean_correlation": 0.012335330057838335,
+    "ssz_score": 0.0,
+    "std_across_modes": 0.03240586815086851,
+    "interpretation": "No SSZ signature detected"
+  },
+  "coherence": {
+    "mean_mode_coherence": 0.06376381372092284,
+    "phase_locking_value": 0.3396390534083716,
+    "ssz_interpretation": "No SSZ signature detected"
+  }
+}

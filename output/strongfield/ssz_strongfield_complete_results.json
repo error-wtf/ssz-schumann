@@ -1,0 +1,266 @@
+{
+  "analysis": "SSZ Strong-Field Complete Analysis",
+  "timestamp": "2025-12-09T00:28:40.791471",
+  "gw_ringdown": {
+    "analysis": "GW Ringdown SSZ Test",
+    "timestamp": "2025-12-09T00:28:40.791471",
+    "events": {
+      "GW150914": {
+        "event": "GW150914",
+        "parameters": {
+          "m_final": 63.1,
+          "a_final": 0.69,
+          "distance_mpc": 410
+        },
+        "gr_prediction": {
+          "f_qnm_hz": 271.71546093172753,
+          "tau_ms": 3.8015517423206093
+        },
+        "observation": {
+          "f_qnm_obs_hz": 251,
+          "f_qnm_obs_err_hz": 8
+        },
+        "ssz_test": {
+          "delta_f_percent": -7.623953697994608,
+          "delta_f_err_percent": 2.9442564558408093,
+          "delta_seg_inferred": -0.07623953697994608,
+          "delta_seg_err": 0.02944256455840809,
+          "significance_sigma": 2.5894326164659422,
+          "consistent_with_gr": false,
+          "upper_bound_95": 0.13394696351442592
+        }
+      },
+      "GW190521": {
+        "event": "GW190521",
+        "parameters": {
+          "m_final": 142,
+          "a_final": 0.72,
+          "distance_mpc": 5300
+        },
+        "gr_prediction": {
+          "f_qnm_hz": 123.6964356304777,
+          "tau_ms": 8.691834992143574
+        },
+        "observation": {
+          "f_qnm_obs_hz": 66,
+          "f_qnm_obs_err_hz": 5
+        },
+        "ssz_test": {
+          "delta_f_percent": -46.64357168935417,
+          "delta_f_err_percent": 4.042153659897411,
+          "delta_seg_inferred": -0.4664357168935417,
+          "delta_seg_err": 0.040421536598974114,
+          "significance_sigma": 11.53928712609554,
+          "consistent_with_gr": false,
+          "upper_bound_95": 0.5456619286275309
+        }
+      },
+      "GW190814": {
+        "event": "GW190814",
+        "parameters": {
+          "m_final": 25.6,
+          "a_final": 0.28,
+          "distance_mpc": 241
+        },
+        "gr_prediction": {
+          "f_qnm_hz": 525.4109189765021,
+          "tau_ms": 1.4366690422156325
+        },
+        "observation": null,
+        "ssz_test": {
+          "note": "No ringdown measurement available"
+        }
+      }
+    },
+    "combined": {
+      "delta_seg_combined": -0.21149703918820084,
+      "delta_seg_combined_err": 0.023798632016266627,
+      "delta_seg_combined_percent": -21.149703918820084,
+      "delta_seg_combined_err_percent": 2.3798632016266628,
+      "chi2": 60.88258788384138,
+      "ndof": 1,
+      "p_value": 6.106226635438361e-15,
+      "upper_bound_95_percent": 25.814235794008344
+    }
+  },
+  "nicer_pulsar": {
+    "analysis": "NICER Neutron Star SSZ Test",
+    "timestamp": "2025-12-09T00:28:40.792041",
+    "pulsars": {
+      "J0030+0451": {
+        "pulsar": "PSR J0030+0451",
+        "parameters": {
+          "mass_msun": 1.44,
+          "mass_err": 0.15,
+          "radius_km": 13.02,
+          "radius_err": 1.15,
+          "period_ms": 4.87
+        },
+        "compactness": {
+          "value": 0.16335526653406995,
+          "error": 0.022309877589888793,
+          "gm_rc2": 0.16335526653406995
+        },
+        "gr_prediction": {
+          "z_surface": 0.2187063944159917,
+          "z_surface_err": 0.040382616709177144,
+          "time_dilation": 0.8205421786427923
+        },
+        "ssz_test": {
+          "delta_seg_inferred": 0.0,
+          "delta_seg_upper_bound": 0.1846430545252699,
+          "delta_seg_upper_bound_percent": 18.46430545252699,
+          "note": "NICER M-R consistent with GR; SSZ bounded by measurement precision"
+        }
+      },
+      "J0740+6620": {
+        "pulsar": "PSR J0740+6620",
+        "parameters": {
+          "mass_msun": 2.08,
+          "mass_err": 0.07,
+          "radius_km": 12.39,
+          "radius_err": 1.14,
+          "period_ms": 2.89
+        },
+        "compactness": {
+          "value": 0.2479554516505846,
+          "error": 0.02429250264528988,
+          "gm_rc2": 0.2479554516505846
+        },
+        "gr_prediction": {
+          "z_surface": 0.4084659363333971,
+          "z_surface_err": 0.06787522822502481,
+          "time_dilation": 0.709992321577375
+        },
+        "ssz_test": {
+          "delta_seg_inferred": 0.0,
+          "delta_seg_upper_bound": 0.16617108597673577,
+          "delta_seg_upper_bound_percent": 16.617108597673578,
+          "note": "NICER M-R consistent with GR; SSZ bounded by measurement precision"
+        }
+      }
+    },
+    "combined": {
+      "best_upper_bound": 0.16617108597673577,
+      "best_upper_bound_percent": 16.617108597673578,
+      "source": "J0740+6620",
+      "note": "Tightest constraint from highest compactness NS"
+    }
+  },
+  "xray_feka": {
+    "analysis": "Fe-Ka Line SSZ Test",
+    "timestamp": "2025-12-09T00:28:40.792041",
+    "sources": {
+      "CygX1": {
+        "source": "Cyg X-1",
+        "type": "HMXB",
+        "parameters": {
+          "mass_msun": 21.0,
+          "spin": 0.998,
+          "r_isco_rg": 1.24
+        },
+        "gr_prediction": {
+          "g_factor_isco": 0.15989550079721307,
+          "E_line_predicted_kev": 1.0233312051021637,
+          "gm_rc2_isco": 0.40322580645161293
+        },
+        "observation": {
+          "E_line_obs_kev": 5.8,
+          "E_line_obs_err_kev": 0.3
+        },
+        "ssz_test": {
+          "delta_E_percent": 466.7764230272798,
+          "delta_E_err_percent": 29.316021880721372,
+          "delta_seg_inferred": 4.667764230272798,
+          "delta_seg_err": 0.2931602188072137,
+          "significance_sigma": 15.92222931632612,
+          "note": "Fe-Ka line profiles are complex; this is a simplified analysis"
+        }
+      },
+      "GRS1915": {
+        "source": "GRS 1915+105",
+        "type": "LMXB",
+        "parameters": {
+          "mass_msun": 12.4,
+          "spin": 0.99,
+          "r_isco_rg": 1.45
+        },
+        "gr_prediction": {
+          "g_factor_isco": 0.2572485266063737,
+          "E_line_predicted_kev": 1.6463905702807917,
+          "gm_rc2_isco": 0.3448275862068966
+        },
+        "observation": {
+          "E_line_obs_kev": 5.5,
+          "E_line_obs_err_kev": 0.4
+        },
+        "ssz_test": {
+          "delta_E_percent": 234.06410965181706,
+          "delta_E_err_percent": 24.295571611041243,
+          "delta_seg_inferred": 2.3406410965181705,
+          "delta_seg_err": 0.24295571611041242,
+          "significance_sigma": 9.63402357429802,
+          "note": "Fe-Ka line profiles are complex; this is a simplified analysis"
+        }
+      },
+      "MCG6": {
+        "source": "MCG-6-30-15",
+        "type": "Seyfert 1",
+        "parameters": {
+          "mass_msun": 3000000.0,
+          "spin": 0.99,
+          "r_isco_rg": 1.45
+        },
+        "gr_prediction": {
+          "g_factor_isco": 0.2572485266063737,
+          "E_line_predicted_kev": 1.6463905702807917,
+          "gm_rc2_isco": 0.3448275862068966
+        },
+        "observation": {
+          "E_line_obs_kev": 4.5,
+          "E_line_obs_err_kev": 0.5
+        },
+        "ssz_test": {
+          "delta_E_percent": 173.32518062421394,
+          "delta_E_err_percent": 30.369464513801546,
+          "delta_seg_inferred": 1.7332518062421394,
+          "delta_seg_err": 0.3036946451380155,
+          "significance_sigma": 5.707218859438417,
+          "note": "Fe-Ka line profiles are complex; this is a simplified analysis"
+        }
+      }
+    },
+    "combined": {
+      "delta_seg_combined": 2.860487537195566,
+      "delta_seg_combined_err": 0.15927424129692913,
+      "delta_seg_combined_percent": 286.0487537195566,
+      "delta_seg_combined_err_percent": 15.927424129692913,
+      "note": "Simplified analysis; full relxill modeling recommended"
+    }
+  },
+  "summary": {
+    "constraints": [
+      {
+        "method": "GW Ringdown",
+        "regime": "BH horizon (GM/Rc^2 ~ 0.5)",
+        "bound_percent": 25.814235794008344
+      },
+      {
+        "method": "NICER Pulsar",
+        "regime": "NS surface (GM/Rc^2 ~ 0.2)",
+        "bound_percent": 16.617108597673578
+      },
+      {
+        "method": "Fe-Ka Lines",
+        "regime": "ISCO (GM/Rc^2 ~ 0.3)",
+        "bound_percent": 317.90360197894245
+      }
+    ],
+    "best_constraint": {
+      "method": "NICER Pulsar",
+      "regime": "NS surface (GM/Rc^2 ~ 0.2)",
+      "bound_percent": 16.617108597673578
+    },
+    "conclusion": "Current data allows SSZ effects up to ~10-20%"
+  }
+}

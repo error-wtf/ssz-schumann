@@ -1,0 +1,163 @@
+2025-12-08 03:53:28,705 [INFO] ======================================================================
+2025-12-08 03:53:28,705 [INFO] SSZ SCHUMANN RESONANCE - FULL ANALYSIS PIPELINE
+2025-12-08 03:53:28,705 [INFO] ======================================================================
+2025-12-08 03:53:28,705 [INFO] Output directory: output\full_analysis\run_20251208_035328
+2025-12-08 03:53:28,706 [INFO] 
+[1/5] Loading data...
+2025-12-08 03:53:28,706 [INFO] Loading Schumann data from E:\clone\ssz-schuhman-experiment\data\schumann\synthetic_2016.nc
+2025-12-08 03:53:30,831 [INFO] Loading F10.7 data from E:\clone\ssz-schuhman-experiment\data\space_weather\synthetic_f107.csv
+2025-12-08 03:53:30,847 [INFO] Loading Kp data from E:\clone\ssz-schuhman-experiment\data\space_weather\synthetic_kp.csv
+2025-12-08 03:53:30,850 [INFO] 
+[2/5] Merging data...
+2025-12-08 03:53:30,850 [INFO] Merging data from 2016-01-01 00:00:00 to 2016-12-31 00:00:00
+2025-12-08 03:53:30,850 [INFO] Target resolution: 1h
+2025-12-08 03:54:05,846 [INFO] Added F10.7: mean=134.4, std=18.4
+2025-12-08 03:54:05,850 [INFO] Added Kp: mean=2.28, std=1.23
+2025-12-08 03:54:05,853 [INFO] Merged dataset: 8761 time points, 14 variables
+2025-12-08 03:54:05,853 [INFO]   Merged dataset: 8761 time points
+2025-12-08 03:54:05,853 [INFO] 
+[3/5] Classical model analysis...
+2025-12-08 03:54:05,853 [INFO] 
+======================================================================
+2025-12-08 03:54:05,853 [INFO] CLASSICAL MODEL ANALYSIS
+2025-12-08 03:54:05,853 [INFO] ======================================================================
+2025-12-08 03:54:05,854 [INFO] Calibrated eta_0 = 0.740131 from f1_mean = 7.8389 Hz
+2025-12-08 03:54:05,854 [INFO]   (Ideal f1 = 10.5913 Hz)
+2025-12-08 03:54:05,854 [INFO] 
+Observed frequencies:
+2025-12-08 03:54:05,854 [INFO]   f1: mean=7.839 Hz, std=0.107 Hz
+2025-12-08 03:54:05,854 [INFO]   f2: mean=13.577 Hz, std=0.185 Hz
+2025-12-08 03:54:05,855 [INFO]   f3: mean=19.201 Hz, std=0.259 Hz
+2025-12-08 03:54:05,855 [INFO] 
+Derived eta_0: 0.7401
+2025-12-08 03:54:05,855 [INFO] 
+Classical predictions (eta=0.7401):
+2025-12-08 03:54:05,855 [INFO]   f1_class = 7.839 Hz
+2025-12-08 03:54:05,855 [INFO]   f2_class = 13.577 Hz
+2025-12-08 03:54:05,855 [INFO]   f3_class = 19.201 Hz
+2025-12-08 03:54:05,855 [INFO] 
+Residuals (obs - classical):
+2025-12-08 03:54:05,855 [INFO]   f1: mean=-0.0000 Hz, std=0.1067 Hz
+2025-12-08 03:54:05,855 [INFO]   f2: mean=-0.0004 Hz, std=0.1855 Hz
+2025-12-08 03:54:05,855 [INFO]   f3: mean=-0.0003 Hz, std=0.2593 Hz
+2025-12-08 03:54:05,855 [INFO] 
+[4/5] SSZ model analysis...
+2025-12-08 03:54:05,855 [INFO] 
+======================================================================
+2025-12-08 03:54:05,855 [INFO] SSZ MODEL ANALYSIS
+2025-12-08 03:54:05,855 [INFO] ======================================================================
+2025-12-08 03:54:05,857 [INFO] 
+Mode 1 delta_seg:
+2025-12-08 03:54:05,857 [INFO]   mean = 0.000185
+2025-12-08 03:54:05,857 [INFO]   std  = 0.013622
+2025-12-08 03:54:05,858 [INFO]   min  = -0.046115
+2025-12-08 03:54:05,858 [INFO]   max  = 0.050530
+2025-12-08 03:54:05,858 [INFO] 
+Mode 2 delta_seg:
+2025-12-08 03:54:05,858 [INFO]   mean = 0.000214
+2025-12-08 03:54:05,858 [INFO]   std  = 0.013674
+2025-12-08 03:54:05,859 [INFO]   min  = -0.043310
+2025-12-08 03:54:05,859 [INFO]   max  = 0.050714
+2025-12-08 03:54:05,859 [INFO] 
+Mode 3 delta_seg:
+2025-12-08 03:54:05,859 [INFO]   mean = 0.000199
+2025-12-08 03:54:05,860 [INFO]   std  = 0.013519
+2025-12-08 03:54:05,860 [INFO]   min  = -0.051335
+2025-12-08 03:54:05,860 [INFO]   max  = 0.047292
+2025-12-08 03:54:05,862 [INFO] Mode consistency check:
+2025-12-08 03:54:05,862 [INFO]   Mean delta_seg: 0.000200
+2025-12-08 03:54:05,862 [INFO]   Std across modes: 0.007217
+2025-12-08 03:54:05,862 [INFO]   Mean correlation: 0.4627
+2025-12-08 03:54:05,862 [INFO]   SSZ score: 0.1563
+2025-12-08 03:54:05,862 [INFO]   Consistent: False
+2025-12-08 03:54:05,862 [INFO] 
+Mode Consistency Check (SSZ Signature):
+2025-12-08 03:54:05,862 [INFO]   Mean correlation: 0.4627
+2025-12-08 03:54:05,862 [INFO]   Std across modes: 0.007217
+2025-12-08 03:54:05,862 [INFO]   SSZ score: 0.1563
+2025-12-08 03:54:05,862 [INFO]   Is consistent: False
+2025-12-08 03:54:05,863 [INFO]   -> Weak/no SSZ signature
+2025-12-08 03:54:05,863 [INFO] 
+[5/5] Layered SSZ model analysis...
+2025-12-08 03:54:05,863 [INFO] 
+======================================================================
+2025-12-08 03:54:05,863 [INFO] LAYERED SSZ MODEL ANALYSIS
+2025-12-08 03:54:05,863 [INFO] ======================================================================
+2025-12-08 03:54:05,863 [INFO] 
+Layer Configuration:
+2025-12-08 03:54:05,863 [INFO]   Ground:     w = 0.00
+2025-12-08 03:54:05,863 [INFO]   Atmosphere: w = 0.20
+2025-12-08 03:54:05,863 [INFO]   Ionosphere: w = 0.80
+2025-12-08 03:54:05,863 [INFO] 
+Extracted sigma_iono (from f1):
+2025-12-08 03:54:05,863 [INFO]   mean = 0.000232
+2025-12-08 03:54:05,864 [INFO]   std  = 0.017027
+2025-12-08 03:54:05,864 [INFO] 
+Correlation sigma_iono vs F10.7: -0.1180
+2025-12-08 03:54:05,865 [INFO] 
+Linear fit: sigma_iono = beta_0 + beta_1 * F10.7
+2025-12-08 03:54:05,865 [INFO]   beta_0 = 0.000232 (baseline)
+2025-12-08 03:54:05,865 [INFO]   beta_1 = -0.002010 (coupling)
+2025-12-08 03:54:05,866 [INFO]   R^2 = 0.0139
+2025-12-08 03:54:05,866 [INFO] 
+Frequency Shifts at Mean Conditions:
+2025-12-08 03:54:05,866 [INFO]   Effective delta_seg = 0.0002 (0.02%)
+2025-12-08 03:54:05,866 [INFO]   f1: 7.83 Hz -> 7.83 Hz (Df = -0.001 Hz)
+2025-12-08 03:54:05,866 [INFO]   f2: 13.56 Hz -> 13.56 Hz (Df = -0.003 Hz)
+2025-12-08 03:54:05,866 [INFO]   f3: 19.18 Hz -> 19.18 Hz (Df = -0.004 Hz)
+2025-12-08 03:54:05,866 [INFO] 
+Creating summary plots...
+2025-12-08 03:54:07,185 [INFO] Saved: output\full_analysis\run_20251208_035328\plots\frequencies_timeseries.png
+2025-12-08 03:54:08,542 [INFO] Saved: output\full_analysis\run_20251208_035328\plots\ssz_analysis_summary.png
+2025-12-08 03:54:09,034 [INFO] Saved: output\full_analysis\run_20251208_035328\plots\frequency_shift_diagram.png
+
+======================================================================
+SSZ SCHUMANN RESONANCE ANALYSIS - FINAL SUMMARY
+======================================================================
+
+Physical Constants:
+  Golden Ratio (phi) = 1.618034
+  Speed of Light = 299792458 m/s
+  Earth Radius = 6.371 km
+
+Classical Model:
+  Effective eta_0 = 0.7401
+  f1_class = 7.839 Hz
+  f2_class = 13.577 Hz
+  f3_class = 19.201 Hz
+
+SSZ Model (Mode Consistency):
+  Mean mode correlation = 0.4627
+  SSZ score = 0.1563
+
+Layered SSZ Model:
+  Baseline sigma_iono (beta_0) = 0.000232
+  F10.7 coupling (beta_1) = -0.002010
+  Model R^2 = 0.0139
+
+Interpretation:
+  -> Weak/no SSZ signature
+     Mode shifts are not consistent with SSZ prediction.
+  -> Higher solar activity DECREASES segmentation
+
+======================================================================
+
+================================================================================
+SSZ FREQUENCY SHIFT TABLE
+================================================================================
+Reference f1 = 7.83 Hz
+--------------------------------------------------------------------------------
+ delta_seg |    f1 (Hz) |    f2 (Hz) |    f3 (Hz) |   Df1 (Hz)
+--------------------------------------------------------------------------------
+    0.0000 |     7.8300 |    13.5620 |    19.1795 |    +0.0000
+    0.0050 |     7.7910 |    13.4945 |    19.0841 |    -0.0390
+    0.0100 |     7.7525 |    13.4277 |    18.9896 |    -0.0775
+    0.0200 |     7.6765 |    13.2960 |    18.8034 |    -0.1535
+================================================================================
+
+Interpretation:
+  delta_seg = 0.01 (1%) -> Df1 ~ -0.08 Hz
+  This is within typical observed variations (+/-0.1-0.2 Hz)
+================================================================================
+2025-12-08 03:54:09,036 [INFO] 
+Results saved to: output\full_analysis\run_20251208_035328

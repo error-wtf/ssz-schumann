@@ -1,0 +1,143 @@
+# SSZ Schumann Experiment - Real Data Configuration Example
+# 
+# This configuration shows how to use real Schumann and space weather data.
+# 
+# BEFORE USING:
+# 1. Download real Schumann data (e.g., from Zenodo: doi:10.5281/zenodo.6348930)
+# 2. Download real F10.7 data (e.g., from NOAA SWPC)
+# 3. Download real Kp data (e.g., from GFZ Potsdam)
+# 4. Place files in data/schumann/real/ and data/space_weather/real/
+# 5. Adjust paths and column names below to match your data
+#
+# (c) 2025 Carmen Wrede & Lino Casu
+# Licensed under the Anti-Capitalist Software License v1.4
+
+# =============================================================================
+# DATA SOURCE CONFIGURATION
+# =============================================================================
+data_source:
+  # Use real data
+  type: "real"
+  
+  # Schumann resonance data
+  schumann:
+    # File format: "csv" or "netcdf"
+    type: "csv"
+    
+    # Path to data file
+    # Example: Sierra Nevada ELF station data
+    path: "data/schumann/real/sierra_nevada_schumann.csv"
+    
+    # Column mappings - adjust to match your data file!
+    time_column: "datetime"
+    freq_columns:
+      1: "f1_hz"      # First Schumann mode frequency
+      2: "f2_hz"      # Second Schumann mode frequency
+      3: "f3_hz"      # Third Schumann mode frequency
+    
+    # Optional: Q-factor columns (resonance quality)
+    q_columns:
+      1: "Q1"
+      2: "Q2"
+      3: "Q3"
+    
+    # Timezone of timestamps in source file
+    # Will be converted to UTC internally
+    timezone: "UTC"
+  
+  # Space weather data
+  space_weather:
+    f107:
+      # F10.7 solar flux index
+      path: "data/space_weather/real/f107_daily.csv"
+      time_column: "date"
+      value_column: "f107"
+      timezone: "UTC"
+    
+    kp:
+      # Kp geomagnetic index
+      path: "data/space_weather/real/kp_3hourly.csv"
+      time_column: "datetime"
+      value_column: "kp"
+      timezone: "UTC"
+
+# =============================================================================
+# CLASSICAL MODEL PARAMETERS
+# =============================================================================
+classical_model:
+  R_earth: 6.371e6
+  c: 299792458.0
+  
+  # For real data, calibrate eta from observations
+  eta_mode: "calibrate"
+  
+  # Or use physics-based decomposition
+  # eta_mode: "physics_based"
+  physics_based:
+    eta_geo: 0.85
+    eta_cond: 0.92
+    eta_height: 0.95
+    h_iono_eff: 80000.0
+    sigma_ground: 0.001
+    sigma_iono: 1.0e-5
+
+# =============================================================================
+# SSZ MODEL PARAMETERS
+# =============================================================================
+ssz_model:
+  layer_weights:
+    ground: 0.0
+    atmosphere: 0.2
+    ionosphere: 0.8
+  
+  default_sigma:
+    ground: 0.0
+    atmosphere: 0.0
+    ionosphere: 0.0  # Will be estimated from data
+  
+  # Enable time-varying model for real data
+  time_varying:
+    enabled: true
+    beta_0: 0.0      # Baseline (to be estimated)
+    beta_1: 0.0001   # Coupling to proxy (to be estimated)
+    proxy: "f107"
+
+# =============================================================================
+# ANALYSIS PARAMETERS
+# =============================================================================
+analysis:
+  modes: [1, 2, 3]
+  
+  calibration:
+    method: "quiet_interval"
+    quiet_days: 14
+  
+  detection:
+    min_correlation: 0.7
+    min_ssz_score: 0.7
+    alpha: 0.05
+  
+  # Match your data's time resolution
+  time_resolution: "1h"
+
+# =============================================================================
+# OUTPUT CONFIGURATION
+# =============================================================================
+output:
+  base_dir: "output/real_analysis"
+  naming: "timestamp"
+  save_plots: true
+  save_csv: true
+  save_json: true
+  
+  plots:
+    dpi: 150
+    format: "png"
+    figsize: [12, 8]
+
+# =============================================================================
+# LOGGING
+# =============================================================================
+logging:
+  level: "INFO"
+  file: null

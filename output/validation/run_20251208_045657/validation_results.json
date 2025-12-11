@@ -1,0 +1,199 @@
+{
+  "unit_tests": {
+    "passed": 94,
+    "failed": 0,
+    "success": true,
+    "output": "osphereState::test_reference_state PASSED [ 85%]\ntests/test_physical_ssz.py::TestDeltaSegPhysical::test_reference_gives_zero PASSED [ 86%]\ntests/test_physical_ssz.py::TestDeltaSegPhysical::test_increased_density PASSED [ 87%]\ntests/test_physical_ssz.py::TestDeltaSegPhysical::test_increased_b_field PASSED [ 88%]\ntests/test_physical_ssz.py::TestDeltaSegFromProxies::test_typical_quiet_sun PASSED [ 89%]\ntests/test_physical_ssz.py::TestDeltaSegFromProxies::test_active_sun PASSED [ 90%]\ntests/test_physical_ssz.py::TestDeltaSegFromProxies::test_geomagnetic_storm PASSED [ 91%]\ntests/test_physical_ssz.py::TestDeltaSegFromProxies::test_height_variation PASSED [ 92%]\ntests/test_physical_ssz.py::TestSSZFrequency::test_reference_state_matches_classical PASSED [ 93%]\ntests/test_physical_ssz.py::TestSSZFrequency::test_mode_independence PASSED [ 94%]\ntests/test_physical_ssz.py::TestPredictions::test_predict_signature_returns_dict PASSED [ 95%]\ntests/test_physical_ssz.py::TestPredictions::test_grid_shape PASSED      [ 96%]\ntests/test_physical_ssz.py::TestPredictions::test_range_is_finite PASSED [ 97%]\ntests/test_physical_ssz.py::TestPhysicalParams::test_default_params PASSED [ 98%]\ntests/test_physical_ssz.py::TestPhysicalParams::test_custom_params PASSED [100%]\n\n============================== warnings summary ===============================\ntests/test_models.py::TestSSZCorrection::test_mode_consistency_inconsistent\n  C:\\Users\\linoc\\AppData\\Roaming\\Python\\Python310\\site-packages\\numpy\\lib\\function_base.py:2897: RuntimeWarning: invalid value encountered in divide\n    c /= stddev[:, None]\n\ntests/test_models.py::TestSSZCorrection::test_mode_consistency_inconsistent\n  C:\\Users\\linoc\\AppData\\Roaming\\Python\\Python310\\site-packages\\numpy\\lib\\function_base.py:2898: RuntimeWarning: invalid value encountered in divide\n    c /= stddev[None, :]\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n======================= 94 passed, 2 warnings in 16.00s =======================\n"
+  },
+  "synthetic": {
+    "amp_0.0": {
+      "amplitude": 0.0,
+      "mean_correlation": -0.013393878363954165,
+      "ssz_score": 0.0,
+      "interpretation": "No SSZ signature detected",
+      "detected": false
+    },
+    "amp_0.01": {
+      "amplitude": 0.01,
+      "mean_correlation": 0.40190290022804737,
+      "ssz_score": 0.25693401116993253,
+      "interpretation": "No SSZ signature detected",
+      "detected": false
+    },
+    "amp_0.02": {
+      "amplitude": 0.02,
+      "mean_correlation": 0.7287760408009717,
+      "ssz_score": 0.46536655243284963,
+      "interpretation": "Weak/partial SSZ signature",
+      "detected": false
+    },
+    "amp_0.05": {
+      "amplitude": 0.05,
+      "mean_correlation": 0.9424254123534821,
+      "ssz_score": 0.5995804299398126,
+      "interpretation": "Weak/partial SSZ signature",
+      "detected": false
+    },
+    "amp_0.1": {
+      "amplitude": 0.1,
+      "mean_correlation": 0.9842447264510444,
+      "ssz_score": 0.6218634268039737,
+      "interpretation": "Weak/partial SSZ signature",
+      "detected": false
+    },
+    "validation": {
+      "correct_null_detection": true,
+      "correct_signal_detection": true,
+      "success": true
+    }
+  },
+  "model_comparison": {
+    "preferred_model": "SSZ",
+    "delta_aic": 13195.758059610569,
+    "delta_bic": 13175.659515365936,
+    "bayes_factor": 0.0,
+    "evidence_strength": "Very strong evidence against SSZ model (BF = inf)",
+    "classical_rmse": 1.0517128665103932,
+    "ssz_rmse": 0.43635111723878856,
+    "classical_r2": 0.9605298742913834,
+    "ssz_r2": 0.9932056749538771,
+    "success": true
+  },
+  "physical": {
+    "plasma_freq_mhz": 2.839302484867768,
+    "gyro_freq_mhz": 1.3996244936166518,
+    "delta_seg_quiet": 0.0009999999998366608,
+    "delta_seg_active": 0.00700000000041422,
+    "delta_seg_range": 0.006000000000577559,
+    "predicted_range": 0.009000000000577562,
+    "success": true
+  },
+  "sensitivity": {
+    "curves": {
+      "noise_0.005": {
+        "amplitudes": [
+          0.0,
+          0.005,
+          0.01,
+          0.015,
+          0.02,
+          0.025,
+          0.03,
+          0.035,
+          0.04,
+          0.045,
+          0.05
+        ],
+        "scores": [
+          0.01266271915328514,
+          0.10243155760763631,
+          0.2591067152328371,
+          0.3822252831330577,
+          0.46161765155525236,
+          0.5115067961662599,
+          0.5436581106879895,
+          0.5651572746451872,
+          0.5800652294309347,
+          0.5907423847650267,
+          0.5986049245115497
+        ],
+        "correlations": [
+          0.01988495293754976,
+          0.16087424814428028,
+          0.40699651997386993,
+          0.6004748483646055,
+          0.725312740935513,
+          0.8038331265845192,
+          0.8545078488104635,
+          0.8884629027453697,
+          0.912075310172986,
+          0.9290519163739842,
+          0.941616842592864
+        ]
+      },
+      "noise_0.01": {
+        "amplitudes": [
+          0.0,
+          0.005,
+          0.01,
+          0.015,
+          0.02,
+          0.025,
+          0.03,
+          0.035,
+          0.04,
+          0.045,
+          0.05
+        ],
+        "scores": [
+          0.00547823023291753,
+          0.016856435882011057,
+          0.043962517807193666,
+          0.07776433205771163,
+          0.11089211005824189,
+          0.13969451037783576,
+          0.1632730988762936,
+          0.18204643280277247,
+          0.19684475450438135,
+          0.2085037083477421,
+          0.21772912167291397
+        ],
+        "correlations": [
+          0.020043832320092127,
+          0.06171085340814179,
+          0.16104712752285485,
+          0.2850656031228131,
+          0.4067975214818999,
+          0.512849131568925,
+          0.5998973334324389,
+          0.6694465159687158,
+          0.7245167193312739,
+          0.7681546701461345,
+          0.802936593278878
+        ]
+      },
+      "noise_0.02": {
+        "amplitudes": [
+          0.0,
+          0.005,
+          0.01,
+          0.015,
+          0.02,
+          0.025,
+          0.03,
+          0.035,
+          0.04,
+          0.045,
+          0.05
+        ],
+        "scores": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "correlations": [
+          0.020344842966771057,
+          0.03229543016906159,
+          0.06211094021073258,
+          0.10654318679313357,
+          0.16133273358358322,
+          0.22209323674473147,
+          0.28497938089706626,
+          0.34702700976192236,
+          0.40620854369378123,
+          0.46131381899515383,
+          0.5117609892355292
+        ]
+      }
+    },
+    "success": true
+  }
+}

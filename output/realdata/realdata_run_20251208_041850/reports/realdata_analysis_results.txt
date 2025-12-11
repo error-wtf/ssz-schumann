@@ -1,0 +1,95 @@
+REAL DATA SSZ SCHUMANN ANALYSIS RESULTS
+==================================================
+
+Analysis Date: 2025-12-08 04:18:54
+Data Period: 2016-01-01 00:00:00 to 2016-03-30 23:00:00
+Data Points: 2160
+
+CLASSICAL MODEL
+------------------------------
+Classical eta_0: 0.739275
+
+SSZ SIGNATURE
+------------------------------
+SSZ score: 0.105904
+Mode correlation (mean): 0.010821
+Mode correlation 1-2: 0.008320
+Mode correlation 1-3: -0.023430
+Mode correlation 2-3: 0.047573
+Mean spread: 0.084425
+Is consistent: False
+
+GLOBAL SSZ MODEL
+------------------------------
+R^2: 0.013025
+RMSE: 0.002132
+beta_0: -0.046317
+beta_1: -0.000222
+F107_norm_coef: -0.000222
+beta_2: -0.000071
+Kp_norm_coef: -0.000071
+
+LAYERED SSZ MODEL
+------------------------------
+R^2: 0.013025
+beta_0: -0.046317
+beta_1: -0.000222
+F107_norm_coef: -0.000222
+beta_2: -0.000071
+Kp_norm_coef: -0.000071
+w_atm: 0.200000
+w_iono: 0.800000
+sigma_atm: 0.000000
+sigma_iono_beta_0: -0.057896
+sigma_iono_beta_1: -0.000278
+sigma_iono_beta_2: -0.000088
+
+PROXY CORRELATIONS
+------------------------------
+F107_norm: -0.109510
+Kp_norm: -0.053364
+
+DELTA_SEG STATISTICS
+------------------------------
+mean: -0.046317
+std: 0.002147
+min: -0.052777
+max: -0.039266
+
+INTERPRETATION
+------------------------------
+============================================================
+SSZ ANALYSIS INTERPRETATION
+============================================================
+
+1. MODE CONSISTENCY (SSZ Signature Test)
+----------------------------------------
+   Weak mode correlation: 0.011
+   -> No clear SSZ signature
+   SSZ Score: 0.1059
+   Mean spread across modes: 8.443%
+
+2. SEGMENTATION MAGNITUDE
+----------------------------------------
+   Mean delta_seg: -4.6317%
+   Std delta_seg:  0.2147%
+   -> Significant segmentation effect (> 1%)
+
+3. IONOSPHERIC PROXY CORRELATIONS
+----------------------------------------
+   F107_norm: r = -0.1095 (weak)
+   Kp_norm: r = -0.0534 (weak)
+
+4. MODEL FIT QUALITY
+----------------------------------------
+   Global SSZ model R²: 0.0130
+   Layered SSZ model R²: 0.0130
+   -> Proxies explain little variance
+
+5. CONCLUSION
+----------------------------------------
+   Results CONSISTENT WITH ZERO SSZ within current sensitivity.
+   No significant mode-independent shifts or proxy correlations
+   detected at the current measurement precision.
+
+============================================================

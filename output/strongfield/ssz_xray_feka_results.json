@@ -1,0 +1,91 @@
+{
+  "analysis": "Fe-Ka Line SSZ Test",
+  "timestamp": "2025-12-09T00:28:40.792041",
+  "sources": {
+    "CygX1": {
+      "source": "Cyg X-1",
+      "type": "HMXB",
+      "parameters": {
+        "mass_msun": 21.0,
+        "spin": 0.998,
+        "r_isco_rg": 1.24
+      },
+      "gr_prediction": {
+        "g_factor_isco": 0.15989550079721307,
+        "E_line_predicted_kev": 1.0233312051021637,
+        "gm_rc2_isco": 0.40322580645161293
+      },
+      "observation": {
+        "E_line_obs_kev": 5.8,
+        "E_line_obs_err_kev": 0.3
+      },
+      "ssz_test": {
+        "delta_E_percent": 466.7764230272798,
+        "delta_E_err_percent": 29.316021880721372,
+        "delta_seg_inferred": 4.667764230272798,
+        "delta_seg_err": 0.2931602188072137,
+        "significance_sigma": 15.92222931632612,
+        "note": "Fe-Ka line profiles are complex; this is a simplified analysis"
+      }
+    },
+    "GRS1915": {
+      "source": "GRS 1915+105",
+      "type": "LMXB",
+      "parameters": {
+        "mass_msun": 12.4,
+        "spin": 0.99,
+        "r_isco_rg": 1.45
+      },
+      "gr_prediction": {
+        "g_factor_isco": 0.2572485266063737,
+        "E_line_predicted_kev": 1.6463905702807917,
+        "gm_rc2_isco": 0.3448275862068966
+      },
+      "observation": {
+        "E_line_obs_kev": 5.5,
+        "E_line_obs_err_kev": 0.4
+      },
+      "ssz_test": {
+        "delta_E_percent": 234.06410965181706,
+        "delta_E_err_percent": 24.295571611041243,
+        "delta_seg_inferred": 2.3406410965181705,
+        "delta_seg_err": 0.24295571611041242,
+        "significance_sigma": 9.63402357429802,
+        "note": "Fe-Ka line profiles are complex; this is a simplified analysis"
+      }
+    },
+    "MCG6": {
+      "source": "MCG-6-30-15",
+      "type": "Seyfert 1",
+      "parameters": {
+        "mass_msun": 3000000.0,
+        "spin": 0.99,
+        "r_isco_rg": 1.45
+      },
+      "gr_prediction": {
+        "g_factor_isco": 0.2572485266063737,
+        "E_line_predicted_kev": 1.6463905702807917,
+        "gm_rc2_isco": 0.3448275862068966
+      },
+      "observation": {
+        "E_line_obs_kev": 4.5,
+        "E_line_obs_err_kev": 0.5
+      },
+      "ssz_test": {
+        "delta_E_percent": 173.32518062421394,
+        "delta_E_err_percent": 30.369464513801546,
+        "delta_seg_inferred": 1.7332518062421394,
+        "delta_seg_err": 0.3036946451380155,
+        "significance_sigma": 5.707218859438417,
+        "note": "Fe-Ka line profiles are complex; this is a simplified analysis"
+      }
+    }
+  },
+  "combined": {
+    "delta_seg_combined": 2.860487537195566,
+    "delta_seg_combined_err": 0.15927424129692913,
+    "delta_seg_combined_percent": 286.0487537195566,
+    "delta_seg_combined_err_percent": 15.927424129692913,
+    "note": "Simplified analysis; full relxill modeling recommended"
+  }
+}

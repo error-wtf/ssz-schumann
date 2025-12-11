@@ -1,0 +1,14 @@
+{
+  "unit_tests": {
+    "passed": 94,
+    "failed": 0,
+    "success": true,
+    "output": "osphereState::test_reference_state PASSED [ 85%]\ntests/test_physical_ssz.py::TestDeltaSegPhysical::test_reference_gives_zero PASSED [ 86%]\ntests/test_physical_ssz.py::TestDeltaSegPhysical::test_increased_density PASSED [ 87%]\ntests/test_physical_ssz.py::TestDeltaSegPhysical::test_increased_b_field PASSED [ 88%]\ntests/test_physical_ssz.py::TestDeltaSegFromProxies::test_typical_quiet_sun PASSED [ 89%]\ntests/test_physical_ssz.py::TestDeltaSegFromProxies::test_active_sun PASSED [ 90%]\ntests/test_physical_ssz.py::TestDeltaSegFromProxies::test_geomagnetic_storm PASSED [ 91%]\ntests/test_physical_ssz.py::TestDeltaSegFromProxies::test_height_variation PASSED [ 92%]\ntests/test_physical_ssz.py::TestSSZFrequency::test_reference_state_matches_classical PASSED [ 93%]\ntests/test_physical_ssz.py::TestSSZFrequency::test_mode_independence PASSED [ 94%]\ntests/test_physical_ssz.py::TestPredictions::test_predict_signature_returns_dict PASSED [ 95%]\ntests/test_physical_ssz.py::TestPredictions::test_grid_shape PASSED      [ 96%]\ntests/test_physical_ssz.py::TestPredictions::test_range_is_finite PASSED [ 97%]\ntests/test_physical_ssz.py::TestPhysicalParams::test_default_params PASSED [ 98%]\ntests/test_physical_ssz.py::TestPhysicalParams::test_custom_params PASSED [100%]\n\n============================== warnings summary ===============================\ntests/test_models.py::TestSSZCorrection::test_mode_consistency_inconsistent\n  C:\\Users\\linoc\\AppData\\Roaming\\Python\\Python310\\site-packages\\numpy\\lib\\function_base.py:2897: RuntimeWarning: invalid value encountered in divide\n    c /= stddev[:, None]\n\ntests/test_models.py::TestSSZCorrection::test_mode_consistency_inconsistent\n  C:\\Users\\linoc\\AppData\\Roaming\\Python\\Python310\\site-packages\\numpy\\lib\\function_base.py:2898: RuntimeWarning: invalid value encountered in divide\n    c /= stddev[None, :]\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n======================= 94 passed, 2 warnings in 16.50s =======================\n"
+  },
+  "synthetic": {
+    "amp_0.0": {
+      "amplitude": 0.0,
+      "mean_correlation": -0.013393878363954165,
+      "ssz_score": 0.0,
+      "interpretation": "No SSZ signature detected",
+      "detected": 

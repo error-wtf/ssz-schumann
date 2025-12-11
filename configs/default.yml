@@ -1,0 +1,157 @@
+# SSZ Schumann Experiment - Default Configuration
+# 
+# This is the default configuration using synthetic data.
+# Copy this file to create custom configurations.
+#
+# (c) 2025 Carmen Wrede & Lino Casu
+# Licensed under the Anti-Capitalist Software License v1.4
+
+# =============================================================================
+# DATA SOURCE CONFIGURATION
+# =============================================================================
+data_source:
+  # Type: "synthetic" or "real"
+  type: "synthetic"
+  
+  # Schumann resonance data
+  schumann:
+    # For synthetic: uses built-in generator
+    # For real: specify path and column mappings
+    type: "netcdf"  # "netcdf" or "csv"
+    path: "data/schumann/synthetic_2016.nc"
+    
+    # Column/variable mappings (for real data)
+    time_column: "time"
+    freq_columns:
+      1: "f1"
+      2: "f2"
+      3: "f3"
+    # Optional Q-factor columns
+    q_columns: null
+    # Timezone of source data (converted to UTC internally)
+    timezone: "UTC"
+  
+  # Space weather data
+  space_weather:
+    f107:
+      path: "data/space_weather/synthetic_f107.csv"
+      time_column: "time"
+      value_column: "f107"
+      timezone: "UTC"
+    kp:
+      path: "data/space_weather/synthetic_kp.csv"
+      time_column: "time"
+      value_column: "kp"
+      timezone: "UTC"
+
+# =============================================================================
+# CLASSICAL MODEL PARAMETERS
+# =============================================================================
+classical_model:
+  # Earth radius (m)
+  R_earth: 6.371e6
+  
+  # Speed of light (m/s)
+  c: 299792458.0
+  
+  # Effective slowdown factor
+  # eta_mode: "fixed", "calibrate", or "physics_based"
+  eta_mode: "calibrate"
+  
+  # Fixed eta value (used if eta_mode = "fixed")
+  eta_fixed: 0.74
+  
+  # Physics-based eta decomposition (used if eta_mode = "physics_based")
+  # eta_eff = eta_geo * eta_cond * eta_height
+  physics_based:
+    # Geometric factor (spherical cavity correction)
+    eta_geo: 0.85
+    # Conductivity factor (finite conductivity effects)
+    eta_cond: 0.92
+    # Height factor (ionospheric height effects)
+    eta_height: 0.95
+    # Effective ionospheric height (m)
+    h_iono_eff: 80000.0
+    # Ground conductivity (S/m)
+    sigma_ground: 0.001
+    # Ionospheric conductivity (S/m)
+    sigma_iono: 1.0e-5
+
+# =============================================================================
+# SSZ MODEL PARAMETERS
+# =============================================================================
+ssz_model:
+  # Layer weights for D_SSZ = 1 + sum(w_j * sigma_j)
+  layer_weights:
+    ground: 0.0      # Hard boundary, no contribution
+    atmosphere: 0.2  # Small contribution
+    ionosphere: 0.8  # Main waveguide boundary
+  
+  # Default segmentation parameters
+  default_sigma:
+    ground: 0.0
+    atmosphere: 0.0
+    ionosphere: 0.01  # 1% default
+  
+  # Time-varying model: sigma_iono(t) = beta_0 + beta_1 * F_iono(t)
+  time_varying:
+    enabled: false
+    beta_0: 0.01
+    beta_1: 0.0001
+    proxy: "f107"  # "f107", "kp", or "combined"
+
+# =============================================================================
+# ANALYSIS PARAMETERS
+# =============================================================================
+analysis:
+  # Modes to analyze
+  modes: [1, 2, 3]
+  
+  # Calibration settings
+  calibration:
+    # Method: "full_fit", "quiet_interval", "fixed"
+    method: "quiet_interval"
+    # Number of quiet days for calibration
+    quiet_days: 14
+  
+  # SSZ detection thresholds
+  detection:
+    # Minimum mode correlation for SSZ signature
+    min_correlation: 0.7
+    # Minimum SSZ score
+    min_ssz_score: 0.7
+    # Significance level for statistical tests
+    alpha: 0.05
+  
+  # Time resolution for analysis
+  time_resolution: "1h"  # "10min", "1h", "1D"
+
+# =============================================================================
+# OUTPUT CONFIGURATION
+# =============================================================================
+output:
+  # Base directory for outputs
+  base_dir: "output"
+  
+  # Subdirectory naming
+  # "timestamp": output/run_YYYYMMDD_HHMMSS/
+  # "config": output/<config_name>/
+  naming: "timestamp"
+  
+  # What to save
+  save_plots: true
+  save_csv: true
+  save_json: true
+  
+  # Plot settings
+  plots:
+    dpi: 150
+    format: "png"  # "png", "pdf", "svg"
+    figsize: [12, 8]
+
+# =============================================================================
+# LOGGING
+# =============================================================================
+logging:
+  level: "INFO"  # "DEBUG", "INFO", "WARNING", "ERROR"
+  file: null  # Set to path for file logging

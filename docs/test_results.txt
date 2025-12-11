@@ -1,0 +1,119 @@
+============================= test session starts =============================
+platform win32 -- Python 3.10.11, pytest-8.4.2, pluggy-1.6.0 -- C:\Program Files\Python310\python.exe
+cachedir: .pytest_cache
+rootdir: E:\clone\ssz-schuhman-experiment
+plugins: anyio-4.11.0, dash-3.2.0, langsmith-0.3.44, docker-3.1.2, timeout-2.4.0
+collecting ... collected 62 items
+
+tests/test_end_to_end.py::TestSyntheticDataGeneration::test_create_synthetic_schumann PASSED [  1%]
+tests/test_end_to_end.py::TestSyntheticDataGeneration::test_create_synthetic_space_weather PASSED [  3%]
+tests/test_end_to_end.py::TestDataMerging::test_merge_all PASSED         [  4%]
+tests/test_end_to_end.py::TestDataMerging::test_compute_derived_variables PASSED [  6%]
+tests/test_end_to_end.py::TestDeltaComputation::test_compute_all_deltas PASSED [  8%]
+tests/test_end_to_end.py::TestDeltaComputation::test_delta_recovery PASSED [  9%]
+tests/test_end_to_end.py::TestModelFitting::test_fit_classical_model PASSED [ 11%]
+tests/test_end_to_end.py::TestModelFitting::test_fit_ssz_model PASSED    [ 12%]
+tests/test_end_to_end.py::TestModelFitting::test_compare_models PASSED   [ 14%]
+tests/test_end_to_end.py::TestModeConsistency::test_ssz_signature_detection PASSED [ 16%]
+tests/test_end_to_end.py::TestFullPipeline::test_run_analysis_pipeline PASSED [ 17%]
+tests/test_layered_ssz.py::TestLayerConfig::test_layer_config_creation PASSED [ 19%]
+tests/test_layered_ssz.py::TestLayerConfig::test_layer_config_defaults PASSED [ 20%]
+tests/test_layered_ssz.py::TestLayeredSSZConfig::test_default_config PASSED [ 22%]
+tests/test_layered_ssz.py::TestLayeredSSZConfig::test_layers_property PASSED [ 24%]
+tests/test_layered_ssz.py::TestLayeredSSZConfig::test_total_weight PASSED [ 25%]
+tests/test_layered_ssz.py::TestLayeredSSZConfig::test_normalize_weights PASSED [ 27%]
+tests/test_layered_ssz.py::TestDSSZCalculations::test_D_SSZ_no_segmentation PASSED [ 29%]
+tests/test_layered_ssz.py::TestDSSZCalculations::test_D_SSZ_ionosphere_only PASSED [ 30%]
+tests/test_layered_ssz.py::TestDSSZCalculations::test_D_SSZ_all_layers PASSED [ 32%]
+tests/test_layered_ssz.py::TestDSSZCalculations::test_D_SSZ_from_sigmas_function PASSED [ 33%]
+tests/test_layered_ssz.py::TestDSSZCalculations::test_effective_delta_seg PASSED [ 35%]
+tests/test_layered_ssz.py::TestFrequencyCalculations::test_f_n_classical_mode1 PASSED [ 37%]
+tests/test_layered_ssz.py::TestFrequencyCalculations::test_f_n_classical_mode2 PASSED [ 38%]
+tests/test_layered_ssz.py::TestFrequencyCalculations::test_f_n_classical_mode3 PASSED [ 40%]
+tests/test_layered_ssz.py::TestFrequencyCalculations::test_f_n_classical_invalid_mode PASSED [ 41%]
+tests/test_layered_ssz.py::TestFrequencyCalculations::test_f_n_ssz_layered_no_correction PASSED [ 43%]
+tests/test_layered_ssz.py::TestFrequencyCalculations::test_f_n_ssz_layered_with_correction PASSED [ 45%]
+tests/test_layered_ssz.py::TestFrequencyCalculations::test_compute_all_modes PASSED [ 46%]
+tests/test_layered_ssz.py::TestFrequencyCalculations::test_relative_shift_uniform PASSED [ 48%]
+tests/test_layered_ssz.py::TestPhiBasedSegmentation::test_phi_segment_density_ssz_core PASSED [ 50%]
+tests/test_layered_ssz.py::TestPhiBasedSegmentation::test_phi_segment_density_linear PASSED [ 51%]
+tests/test_layered_ssz.py::TestPhiBasedSegmentation::test_sigma_from_phi_ratio_no_difference PASSED [ 53%]
+tests/test_layered_ssz.py::TestPhiBasedSegmentation::test_sigma_from_phi_ratio_positive PASSED [ 54%]
+tests/test_layered_ssz.py::TestPhiBasedSegmentation::test_create_phi_based_config PASSED [ 56%]
+tests/test_layered_ssz.py::TestTimeVaryingModel::test_sigma_iono_from_proxy_constant PASSED [ 58%]
+tests/test_layered_ssz.py::TestTimeVaryingModel::test_sigma_iono_from_proxy_varying PASSED [ 59%]
+tests/test_layered_ssz.py::TestTimeVaryingModel::test_f_n_ssz_timeseries PASSED [ 61%]
+tests/test_layered_ssz.py::TestTimeVaryingModel::test_f_n_ssz_timeseries_pandas PASSED [ 62%]
+tests/test_layered_ssz.py::TestFrequencyShiftEstimate::test_zero_segmentation PASSED [ 64%]
+tests/test_layered_ssz.py::TestFrequencyShiftEstimate::test_one_percent_segmentation PASSED [ 66%]
+tests/test_layered_ssz.py::TestFrequencyShiftEstimate::test_shift_proportional_to_frequency PASSED [ 67%]
+tests/test_layered_ssz.py::TestPhysicalConsistency::test_positive_segmentation_lowers_frequency PASSED [ 69%]
+tests/test_layered_ssz.py::TestPhysicalConsistency::test_negative_segmentation_raises_frequency PASSED [ 70%]
+tests/test_layered_ssz.py::TestPhysicalConsistency::test_frequency_ratios_preserved PASSED [ 72%]
+tests/test_layered_ssz.py::TestPhysicalConsistency::test_realistic_shift_magnitude PASSED [ 74%]
+tests/test_models.py::TestClassicalSchumann::test_mode_factor PASSED     [ 75%]
+tests/test_models.py::TestClassicalSchumann::test_f_n_classical_values PASSED [ 77%]
+tests/test_models.py::TestClassicalSchumann::test_f_n_classical_eta_1 PASSED [ 79%]
+tests/test_models.py::TestClassicalSchumann::test_f_n_classical_scaling PASSED [ 80%]
+tests/test_models.py::TestClassicalSchumann::test_compute_eta0_from_mean_f1 PASSED [ 82%]
+tests/test_models.py::TestClassicalSchumann::test_f_n_classical_timeseries PASSED [ 83%]
+tests/test_models.py::TestSSZCorrection::test_D_SSZ_basic PASSED         [ 85%]
+tests/test_models.py::TestSSZCorrection::test_D_SSZ_array PASSED         [ 87%]
+tests/test_models.py::TestSSZCorrection::test_f_n_ssz_model PASSED       [ 88%]
+tests/test_models.py::TestSSZCorrection::test_delta_seg_from_observed PASSED [ 90%]
+tests/test_models.py::TestSSZCorrection::test_delta_seg_roundtrip PASSED [ 91%]
+tests/test_models.py::TestSSZCorrection::test_mode_consistency_perfect PASSED [ 93%]
+tests/test_models.py::TestSSZCorrection::test_mode_consistency_inconsistent PASSED [ 95%]
+tests/test_models.py::TestPhysicalConsistency::test_frequency_ratios PASSED [ 96%]
+tests/test_models.py::TestPhysicalConsistency::test_ssz_preserves_ratios PASSED [ 98%]
+tests/test_models.py::TestPhysicalConsistency::test_relative_shift_uniform PASSED [100%]
+
+============================== warnings summary ===============================
+tests/test_end_to_end.py::TestSyntheticDataGeneration::test_create_synthetic_schumann
+tests/test_end_to_end.py::TestDataMerging::test_merge_all
+tests/test_end_to_end.py::TestDataMerging::test_compute_derived_variables
+tests/test_end_to_end.py::TestDeltaComputation::test_compute_all_deltas
+tests/test_end_to_end.py::TestDeltaComputation::test_delta_recovery
+tests/test_end_to_end.py::TestModelFitting::test_fit_classical_model
+tests/test_end_to_end.py::TestModelFitting::test_fit_ssz_model
+tests/test_end_to_end.py::TestModelFitting::test_compare_models
+tests/test_end_to_end.py::TestFullPipeline::test_run_analysis_pipeline
+  E:\clone\ssz-schuhman-experiment\ssz_schumann\data_io\schumann_sierra_nevada.py:396: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+    time = pd.date_range(start=start, end=end, freq=freq)
+
+tests/test_end_to_end.py::TestDataMerging::test_merge_all
+tests/test_end_to_end.py::TestModelFitting::test_fit_ssz_model
+tests/test_end_to_end.py::TestModelFitting::test_compare_models
+tests/test_end_to_end.py::TestFullPipeline::test_run_analysis_pipeline
+  E:\clone\ssz-schuhman-experiment\ssz_schumann\data_io\merge.py:82: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+    target_time = pd.date_range(
+
+tests/test_end_to_end.py::TestDataMerging::test_merge_all
+tests/test_end_to_end.py::TestModelFitting::test_fit_ssz_model
+tests/test_end_to_end.py::TestModelFitting::test_compare_models
+tests/test_end_to_end.py::TestFullPipeline::test_run_analysis_pipeline
+  C:\Users\linoc\AppData\Roaming\Python\Python310\site-packages\xarray\groupers.py:513: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+    self.index_grouper = pd.Grouper(
+
+tests/test_models.py::TestClassicalSchumann::test_f_n_classical_timeseries
+  E:\clone\ssz-schuhman-experiment\tests\test_models.py:95: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+    time = pd.date_range("2016-01-01", periods=100, freq="1H")
+
+tests/test_models.py::TestSSZCorrection::test_mode_consistency_perfect
+  E:\clone\ssz-schuhman-experiment\tests\test_models.py:164: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+    time = pd.date_range("2016-01-01", periods=1000, freq="1H")
+
+tests/test_models.py::TestSSZCorrection::test_mode_consistency_inconsistent
+  E:\clone\ssz-schuhman-experiment\tests\test_models.py:182: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+    time = pd.date_range("2016-01-01", periods=1000, freq="1H")
+
+tests/test_models.py::TestSSZCorrection::test_mode_consistency_inconsistent
+  C:\Users\linoc\AppData\Roaming\Python\Python310\site-packages\numpy\lib\function_base.py:2897: RuntimeWarning: invalid value encountered in divide
+    c /= stddev[:, None]
+
+tests/test_models.py::TestSSZCorrection::test_mode_consistency_inconsistent
+  C:\Users\linoc\AppData\Roaming\Python\Python310\site-packages\numpy\lib\function_base.py:2898: RuntimeWarning: invalid value encountered in divide
+    c /= stddev[None, :]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+====================== 62 passed, 22 warnings in 15.78s =======================

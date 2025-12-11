@@ -1,0 +1,122 @@
+{
+  "created": "2025-12-09T00:21:25.908630",
+  "purpose": "SSZ Strong-Field Test Data",
+  "events": {
+    "GW150914": {
+      "parameters": {
+        "source": "Hardcoded (GWTC-3)",
+        "mass_1": 35.6,
+        "mass_2": 30.6,
+        "final_mass": 63.1,
+        "final_spin": 0.69,
+        "luminosity_distance": 410
+      },
+      "ssz_predictions": {
+        "r_schwarzschild_km": 186.38762879945315,
+        "gm_rc2_horizon": 0.5,
+        "f_qnm_schwarzschild_hz": 45.51624573685355,
+        "f_qnm_kerr_hz": 65.69598223658392,
+        "r_isco_rg": 3.438574112883922,
+        "gm_rc2_isco": 0.145409109586023,
+        "ssz_test": {
+          "description": "Compare observed f_QNM with GR prediction",
+          "gr_prediction": 65.69598223658392,
+          "ssz_model": "f_QNM_SSZ = f_QNM_GR \u00d7 (1 + \u03b4_seg)",
+          "expected_delta_seg": "< 1% if SSZ is small correction"
+        }
+      },
+      "hardcoded_info": {
+        "type": "BBH",
+        "description": "First GW detection, BBH merger",
+        "m1": 35.6,
+        "m2": 30.6,
+        "m_final": 63.1,
+        "spin_final": 0.69,
+        "distance_mpc": 410,
+        "ssz_relevance": "Ringdown frequency test"
+      }
+    },
+    "GW170817": {
+      "parameters": {
+        "source": "Hardcoded (GWTC-3)",
+        "mass_1": 1.46,
+        "mass_2": 1.27,
+        "final_mass": null,
+        "final_spin": null,
+        "luminosity_distance": 40
+      },
+      "ssz_predictions": {
+        "ssz_test": {
+          "description": "Compare observed f_QNM with GR prediction",
+          "gr_prediction": null,
+          "ssz_model": "f_QNM_SSZ = f_QNM_GR \u00d7 (1 + \u03b4_seg)",
+          "expected_delta_seg": "< 1% if SSZ is small correction"
+        }
+      },
+      "hardcoded_info": {
+        "type": "BNS",
+        "description": "Binary neutron star with EM counterpart",
+        "m1": 1.46,
+        "m2": 1.27,
+        "distance_mpc": 40,
+        "ssz_relevance": "c_gw vs c_em comparison (already |\u0394c/c| < 10^-15)"
+      }
+    },
+    "GW190521": {
+      "parameters": {
+        "source": "Hardcoded (GWTC-3)",
+        "mass_1": 85,
+        "mass_2": 66,
+        "final_mass": 142,
+        "final_spin": null,
+        "luminosity_distance": 5300
+      },
+      "ssz_predictions": {
+        "r_schwarzschild_km": 419.4460109274539,
+        "gm_rc2_horizon": 0.5,
+        "f_qnm_schwarzschild_hz": 20.225881028137035,
+        "ssz_test": {
+          "description": "Compare observed f_QNM with GR prediction",
+          "gr_prediction": 20.225881028137035,
+          "ssz_model": "f_QNM_SSZ = f_QNM_GR \u00d7 (1 + \u03b4_seg)",
+          "expected_delta_seg": "< 1% if SSZ is small correction"
+        }
+      },
+      "hardcoded_info": {
+        "type": "BBH",
+        "description": "Highest mass BBH, intermediate mass BH",
+        "m1": 85,
+        "m2": 66,
+        "m_final": 142,
+        "distance_mpc": 5300,
+        "ssz_relevance": "Strongest field, highest mass ringdown"
+      }
+    },
+    "GW190814": {
+      "parameters": {
+        "source": "Hardcoded (GWTC-3)",
+        "mass_1": 23,
+        "mass_2": 2.6,
+        "final_mass": null,
+        "final_spin": null,
+        "luminosity_distance": 241
+      },
+      "ssz_predictions": {
+        "ssz_test": {
+          "description": "Compare observed f_QNM with GR prediction",
+          "gr_prediction": null,
+          "ssz_model": "f_QNM_SSZ = f_QNM_GR \u00d7 (1 + \u03b4_seg)",
+          "expected_delta_seg": "< 1% if SSZ is small correction"
+        }
+      },
+      "hardcoded_info": {
+        "type": "NSBH?",
+        "description": "Mass gap object (2.6 M_sun secondary)",
+        "m1": 23,
+        "m2": 2.6,
+        "distance_mpc": 241,
+        "ssz_relevance": "Unusual mass ratio, potential NS"
+      }
+    }
+  }
+}

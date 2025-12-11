@@ -1,0 +1,82 @@
+{
+  "analysis": "GW Ringdown SSZ Test",
+  "timestamp": "2025-12-09T00:28:40.791471",
+  "events": {
+    "GW150914": {
+      "event": "GW150914",
+      "parameters": {
+        "m_final": 63.1,
+        "a_final": 0.69,
+        "distance_mpc": 410
+      },
+      "gr_prediction": {
+        "f_qnm_hz": 271.71546093172753,
+        "tau_ms": 3.8015517423206093
+      },
+      "observation": {
+        "f_qnm_obs_hz": 251,
+        "f_qnm_obs_err_hz": 8
+      },
+      "ssz_test": {
+        "delta_f_percent": -7.623953697994608,
+        "delta_f_err_percent": 2.9442564558408093,
+        "delta_seg_inferred": -0.07623953697994608,
+        "delta_seg_err": 0.02944256455840809,
+        "significance_sigma": 2.5894326164659422,
+        "consistent_with_gr": false,
+        "upper_bound_95": 0.13394696351442592
+      }
+    },
+    "GW190521": {
+      "event": "GW190521",
+      "parameters": {
+        "m_final": 142,
+        "a_final": 0.72,
+        "distance_mpc": 5300
+      },
+      "gr_prediction": {
+        "f_qnm_hz": 123.6964356304777,
+        "tau_ms": 8.691834992143574
+      },
+      "observation": {
+        "f_qnm_obs_hz": 66,
+        "f_qnm_obs_err_hz": 5
+      },
+      "ssz_test": {
+        "delta_f_percent": -46.64357168935417,
+        "delta_f_err_percent": 4.042153659897411,
+        "delta_seg_inferred": -0.4664357168935417,
+        "delta_seg_err": 0.040421536598974114,
+        "significance_sigma": 11.53928712609554,
+        "consistent_with_gr": false,
+        "upper_bound_95": 0.5456619286275309
+      }
+    },
+    "GW190814": {
+      "event": "GW190814",
+      "parameters": {
+        "m_final": 25.6,
+        "a_final": 0.28,
+        "distance_mpc": 241
+      },
+      "gr_prediction": {
+        "f_qnm_hz": 525.4109189765021,
+        "tau_ms": 1.4366690422156325
+      },
+      "observation": null,
+      "ssz_test": {
+        "note": "No ringdown measurement available"
+      }
+    }
+  },
+  "combined": {
+    "delta_seg_combined": -0.21149703918820084,
+    "delta_seg_combined_err": 0.023798632016266627,
+    "delta_seg_combined_percent": -21.149703918820084,
+    "delta_seg_combined_err_percent": 2.3798632016266628,
+    "chi2": 60.88258788384138,
+    "ndof": 1,
+    "p_value": 6.106226635438361e-15,
+    "upper_bound_95_percent": 25.814235794008344
+  }
+}

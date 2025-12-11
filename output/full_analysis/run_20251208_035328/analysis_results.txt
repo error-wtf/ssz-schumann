@@ -1,0 +1,11 @@
+SSZ SCHUMANN ANALYSIS RESULTS
+==================================================
+
+Timestamp: 20251208_035328
+
+Classical eta_0: 0.740131
+SSZ score: 0.156303
+Mode correlation: 0.462698
+Layered beta_0: 0.000232
+Layered beta_1: -0.002010
+Layered R^2: 0.013930

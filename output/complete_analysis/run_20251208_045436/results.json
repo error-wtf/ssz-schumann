@@ -1,0 +1,20 @@
+{
+  "timestamp": "2025-12-08T04:54:38.196330",
+  "classical": {
+    "f1_mean": 7.792205410841803,
+    "f2_mean": 13.498920885151161,
+    "f3_mean": 19.087708513809154,
+    "eta_mean": 0.7357734334544528
+  },
+  "ssz": {
+    "mean_correlation": 0.6002988847053307,
+    "ssz_score": 0.1555041018638749,
+    "std_across_modes": 0.007409555376065585,
+    "interpretation": "Weak/partial SSZ signature"
+  },
+  "coherence": {
+    "mean_mode_coherence": 0.1121391597538427,
+    "phase_locking_value": 0.5486867742449656,
+    "ssz_interpretation": "Weak/partial SSZ signature"
+  }
+}

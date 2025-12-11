@@ -1,0 +1,43 @@
+analysis:
+  calibration:
+    method: quiet_interval
+    quiet_days: 14
+  modes:
+  - 1
+  - 2
+  - 3
+classical_model:
+  R_earth: 6371000.0
+  c: 299792458.0
+  eta_mode: calibrate
+data_source:
+  schumann:
+    freq_columns:
+      1: f1
+      2: f2
+      3: f3
+    path: data/schumann/realistic_schumann_2016.csv
+    time_column: time
+    timezone: UTC
+    type: csv
+  space_weather:
+    f107:
+      path: data/space_weather/real/f107_noaa_observed.csv
+      time_column: date
+      timezone: UTC
+      value_column: f107
+    kp:
+      path: data/space_weather/real/kp_gfz_daily.csv
+      time_column: date
+      timezone: UTC
+      value_column: kp_mean
+  type: real
+output:
+  base_dir: output/real_analysis
+  save_csv: true
+  save_plots: true
+ssz_model:
+  layer_weights:
+    atmosphere: 0.2
+    ground: 0.0
+    ionosphere: 0.8

@@ -1,0 +1,164 @@
+2025-12-08 02:23:02,676 [INFO] Output directory: output\run_20251208_022302
+2025-12-08 02:23:02,676 [INFO] Log file: output\run_20251208_022302\logs\analysis.log
+2025-12-08 02:23:02,676 [INFO] 
+2025-12-08 02:23:06,058 [INFO] ======================================================================
+2025-12-08 02:23:06,059 [INFO] SSZ SCHUMANN RESONANCE ANALYSIS - SYNTHETIC DATA
+2025-12-08 02:23:06,059 [INFO] ======================================================================
+2025-12-08 02:23:06,059 [INFO] 
+2025-12-08 02:23:06,059 [INFO] Synthetic data parameters:
+2025-12-08 02:23:06,059 [INFO]   eta_0 = 0.74
+2025-12-08 02:23:06,059 [INFO]   delta_seg_amplitude = 0.02
+2025-12-08 02:23:06,059 [INFO]   noise_level = 0.01
+2025-12-08 02:23:06,059 [INFO] 
+2025-12-08 02:23:06,059 [INFO] Creating synthetic Schumann data...
+2025-12-08 02:23:06,063 [INFO]   Created 4345 time points
+2025-12-08 02:23:06,063 [INFO] Creating synthetic space weather data...
+2025-12-08 02:23:06,064 [INFO]   F10.7: 182 points, mean=127.3
+2025-12-08 02:23:06,064 [INFO]   Kp: 182 points, mean=2.24
+2025-12-08 02:23:06,065 [INFO] 
+Merging data...
+2025-12-08 02:23:06,065 [INFO] Merging data from 2016-01-01 00:00:00 to 2016-06-30 00:00:00
+2025-12-08 02:23:06,065 [INFO] Target resolution: 1H
+2025-12-08 02:23:17,424 [INFO] Added F10.7: mean=127.4, std=17.2
+2025-12-08 02:23:17,427 [INFO] Added Kp: mean=2.25, std=1.10
+2025-12-08 02:23:17,428 [INFO] Merged dataset: 4345 time points, 14 variables
+2025-12-08 02:23:17,434 [INFO]   Merged dataset: 4345 time points
+2025-12-08 02:23:17,435 [INFO] 
+Running analysis pipeline...
+2025-12-08 02:23:17,435 [INFO] ============================================================
+2025-12-08 02:23:17,435 [INFO] STEP 1: Computing delta_seg values
+2025-12-08 02:23:17,435 [INFO] ============================================================
+2025-12-08 02:23:17,435 [INFO] Calibrated eta_0 = 0.737083 from f1_mean = 7.8066 Hz
+2025-12-08 02:23:17,435 [INFO]   (Ideal f1 = 10.5913 Hz)
+2025-12-08 02:23:17,435 [INFO] Using eta_0 = 0.737083
+2025-12-08 02:23:17,436 [INFO] f1_classical = 7.8066 Hz
+2025-12-08 02:23:17,436 [INFO] f2_classical = 13.5215 Hz
+2025-12-08 02:23:17,436 [INFO] f3_classical = 19.1223 Hz
+2025-12-08 02:23:17,437 [INFO] delta_seg_1: mean=0.000175, std=0.013236
+2025-12-08 02:23:17,438 [INFO] delta_seg_2: mean=-0.000006, std=0.013169
+2025-12-08 02:23:17,439 [INFO] delta_seg_3: mean=0.000138, std=0.013372
+2025-12-08 02:23:17,440 [INFO] delta_seg_mean: mean=0.000102, std=0.010301
+2025-12-08 02:23:17,440 [INFO] 
+============================================================
+2025-12-08 02:23:17,441 [INFO] STEP 2: Checking mode consistency (SSZ signature)
+2025-12-08 02:23:17,441 [INFO] ============================================================
+2025-12-08 02:23:17,443 [INFO] Mode consistency check:
+2025-12-08 02:23:17,443 [INFO]   Mean delta_seg: 0.000102
+2025-12-08 02:23:17,443 [INFO]   Std across modes: 0.007394
+2025-12-08 02:23:17,443 [INFO]   Mean correlation: 0.4053
+2025-12-08 02:23:17,443 [INFO]   SSZ score: 0.1144
+2025-12-08 02:23:17,443 [INFO]   Consistent: False
+2025-12-08 02:23:17,443 [INFO] 
+============================================================
+2025-12-08 02:23:17,443 [INFO] STEP 3: Fitting classical model
+2025-12-08 02:23:17,443 [INFO] ============================================================
+2025-12-08 02:23:17,444 [INFO] Calibrated eta_0 = 0.737083 from f1_mean = 7.8066 Hz
+2025-12-08 02:23:17,444 [INFO]   (Ideal f1 = 10.5913 Hz)
+2025-12-08 02:23:17,445 [INFO] Classical model fit:
+2025-12-08 02:23:17,445 [INFO]   eta_0 = 0.737083
+2025-12-08 02:23:17,445 [INFO]   R² = 0.9983
+2025-12-08 02:23:17,445 [INFO]   RMSE = 0.1894 Hz
+2025-12-08 02:23:17,445 [INFO]   AIC = -43375.9, BIC = -43368.4
+2025-12-08 02:23:17,446 [INFO] 
+============================================================
+2025-12-08 02:23:17,446 [INFO] STEP 4: Fitting SSZ model
+2025-12-08 02:23:17,446 [INFO] ============================================================
+2025-12-08 02:23:17,446 [INFO] Calibrated eta_0 = 0.737083 from f1_mean = 7.8066 Hz
+2025-12-08 02:23:17,446 [INFO]   (Ideal f1 = 10.5913 Hz)
+2025-12-08 02:23:17,448 [INFO] Mode consistency check:
+2025-12-08 02:23:17,448 [INFO]   Mean delta_seg: 0.000102
+2025-12-08 02:23:17,448 [INFO]   Std across modes: 0.007394
+2025-12-08 02:23:17,448 [INFO]   Mean correlation: 0.4053
+2025-12-08 02:23:17,448 [INFO]   SSZ score: 0.1144
+2025-12-08 02:23:17,448 [INFO]   Consistent: False
+2025-12-08 02:23:17,451 [INFO] Fit result (n=4345):
+2025-12-08 02:23:17,451 [INFO]   beta_0 = 0.000102
+2025-12-08 02:23:17,451 [INFO]   beta_1 (f107_norm) = -0.000177
+2025-12-08 02:23:17,451 [INFO]   beta_2 (kp_norm) = -0.000023
+2025-12-08 02:23:17,451 [INFO]   R² = 0.0003
+2025-12-08 02:23:17,451 [INFO]   RMSE = 0.010299
+2025-12-08 02:23:17,455 [INFO] SSZ model fit:
+2025-12-08 02:23:17,456 [INFO]   eta_0 = 0.737083
+2025-12-08 02:23:17,456 [INFO]   beta_0 = 0.000102
+2025-12-08 02:23:17,456 [INFO]   beta_1 = -0.000177
+2025-12-08 02:23:17,456 [INFO]   R² = 0.9983
+2025-12-08 02:23:17,456 [INFO]   RMSE = 0.1894 Hz
+2025-12-08 02:23:17,456 [INFO]   AIC = -43370.3, BIC = -43340.4
+2025-12-08 02:23:17,456 [INFO]   Mode consistency score: 0.1144
+2025-12-08 02:23:17,456 [INFO] 
+============================================================
+2025-12-08 02:23:17,456 [INFO] STEP 5: Comparing models
+2025-12-08 02:23:17,456 [INFO] ============================================================
+2025-12-08 02:23:17,456 [INFO] 
+Model comparison:
+2025-12-08 02:23:17,456 [INFO]   Classical: R²=0.9983, RMSE=0.1894, AIC=-43375.9
+2025-12-08 02:23:17,456 [INFO]   SSZ:       R²=0.9983, RMSE=0.1894, AIC=-43370.3
+2025-12-08 02:23:17,456 [INFO]   Classical model preferred: SSZ does not significantly improve fit or lacks mode consistency
+2025-12-08 02:23:17,457 [INFO] 
+============================================================
+2025-12-08 02:23:17,457 [INFO] SUMMARY
+2025-12-08 02:23:17,457 [INFO] ============================================================
+2025-12-08 02:23:17,457 [INFO] 
+============================================================
+SSZ SCHUMANN ANALYSIS SUMMARY
+============================================================
+
+Data: 4345 time points
+Modes analyzed: [1, 2, 3]
+Calibrated eta_0: 0.737083
+
+Mode Consistency (SSZ Signature):
+  Mean delta_seg: 0.000102
+  Std across modes: 0.007394
+  SSZ score: 0.1144
+  Consistent: False
+
+Classical Model:
+  R²: 0.9983
+  RMSE: 0.1894 Hz
+  AIC: -43375.9
+
+SSZ Model:
+  R²: 0.9983
+  RMSE: 0.1894 Hz
+  AIC: -43370.3
+  beta_0: 0.000102
+  beta_1: -0.000177
+
+Model Comparison:
+  Preferred: classical
+  Delta R²: +0.0000
+  Delta AIC: +5.6
+
+============================================================
+2025-12-08 02:23:17,458 [INFO] 
+Results saved to output\run_20251208_022302
+2025-12-08 02:23:17,459 [INFO] 
+Creating plots...
+2025-12-08 02:23:18,537 [INFO] Saved: output\run_20251208_022302\plots\timeseries_frequencies.png
+2025-12-08 02:23:18,537 [INFO] Calibrated eta_0 = 0.737083 from f1_mean = 7.8066 Hz
+2025-12-08 02:23:18,537 [INFO]   (Ideal f1 = 10.5913 Hz)
+2025-12-08 02:23:18,537 [INFO] Using eta_0 = 0.737083
+2025-12-08 02:23:18,538 [INFO] f1_classical = 7.8066 Hz
+2025-12-08 02:23:18,539 [INFO] f2_classical = 13.5215 Hz
+2025-12-08 02:23:18,539 [INFO] f3_classical = 19.1223 Hz
+2025-12-08 02:23:18,540 [INFO] delta_seg_1: mean=0.000175, std=0.013236
+2025-12-08 02:23:18,541 [INFO] delta_seg_2: mean=-0.000006, std=0.013169
+2025-12-08 02:23:18,542 [INFO] delta_seg_3: mean=0.000138, std=0.013372
+2025-12-08 02:23:18,543 [INFO] delta_seg_mean: mean=0.000102, std=0.010301
+2025-12-08 02:23:19,288 [INFO] Saved: output\run_20251208_022302\plots\timeseries_delta_seg.png
+2025-12-08 02:23:19,717 [INFO] Saved: output\run_20251208_022302\plots\scatter_delta_vs_f107.png
+2025-12-08 02:23:20,618 [INFO] Saved: output\run_20251208_022302\plots\mode_consistency.png
+2025-12-08 02:23:21,672 [INFO] Saved: output\run_20251208_022302\plots\summary.png
+2025-12-08 02:23:21,672 [INFO] 
+Plots saved to: output\run_20251208_022302\plots
+2025-12-08 02:23:21,672 [INFO] 
+2025-12-08 02:23:21,673 [INFO] ======================================================================
+2025-12-08 02:23:21,673 [INFO] ANALYSIS COMPLETE
+2025-12-08 02:23:21,673 [INFO] ======================================================================
+2025-12-08 02:23:21,673 [INFO] Results saved to: output\run_20251208_022302
+2025-12-08 02:23:21,673 [INFO] 
+2025-12-08 02:23:21,673 [INFO] Key Findings:
+2025-12-08 02:23:21,673 [INFO]   Preferred model: classical
+2025-12-08 02:23:21,673 [INFO]   SSZ improvement (Delta R^2): +0.0000
+2025-12-08 02:23:21,673 [INFO]   Mode consistency score: 0.1144

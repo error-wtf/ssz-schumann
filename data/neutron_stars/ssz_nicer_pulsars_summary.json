@@ -1,0 +1,133 @@
+{
+  "created": "2025-12-09T00:23:09.477177",
+  "purpose": "SSZ Strong-Field Test - Neutron Star Data",
+  "data_source": "NICER (Neutron Star Interior Composition Explorer)",
+  "archive": "https://heasarc.gsfc.nasa.gov/docs/nicer/nicer_archive.html",
+  "pulsars": {
+    "J0030+0451": {
+      "info": {
+        "name": "PSR J0030+0451",
+        "type": "Isolated MSP",
+        "period_ms": 4.87,
+        "distance_kpc": 0.325,
+        "mass_msun": 1.44,
+        "mass_err": [
+          0.15,
+          0.14
+        ],
+        "radius_km": 13.02,
+        "radius_err": [
+          1.24,
+          1.06
+        ],
+        "reference": "Miller+2019 (ApJL 887, L24)",
+        "arxiv": "1912.05705",
+        "nicer_exposure_ks": 1800,
+        "ssz_relevance": "Best M-R constraint, clean isolated pulsar"
+      },
+      "ssz_quantities": {
+        "r_schwarzschild_km": 4.2535370122220675,
+        "compactness": 0.16334627543095498,
+        "gm_rc2": 0.16334627543095498,
+        "z_surface": 0.21869012014480194,
+        "time_dilation_factor": 0.8205531360844891,
+        "g_surface_m_s2": 1127616725774.597,
+        "g_surface_earth": 114945639732.3748,
+        "v_escape_c": 0.5715702501547031,
+        "ssz_test": {
+          "description": "Test SSZ via pulse profile modeling",
+          "gr_prediction": {
+            "z_surface": 0.21869012014480194,
+            "time_dilation": 0.8205531360844891
+          },
+          "ssz_model": {
+            "z_SSZ": "z_GR \u00d7 (1 + \u03b4_seg)",
+            "tau_SSZ": "\u03c4_GR \u00d7 (1 + \u03b4_seg)"
+          },
+          "observable": "Pulse profile shape depends on z and light bending",
+          "sensitivity": "\u03b4_seg detectable if > 4.6% of z_surface"
+        }
+      }
+    },
+    "J0740+6620": {
+      "info": {
+        "name": "PSR J0740+6620",
+        "type": "MSP in binary",
+        "period_ms": 2.89,
+        "distance_kpc": 1.14,
+        "mass_msun": 2.08,
+        "mass_err": [
+          0.07,
+          0.07
+        ],
+        "radius_km": 12.39,
+        "radius_err": [
+          1.3,
+          0.98
+        ],
+        "reference": "Riley+2021 (ApJL 918, L27)",
+        "arxiv": "2105.06980",
+        "nicer_exposure_ks": 1100,
+        "ssz_relevance": "Highest precisely measured NS mass"
+      },
+      "ssz_quantities": {
+        "r_schwarzschild_km": 6.143997906542987,
+        "compactness": 0.24794180413813507,
+        "gm_rc2": 0.24794180413813507,
+        "z_surface": 0.4084278056220878,
+        "time_dilation_factor": 0.7100115433735777,
+        "g_surface_m_s2": 1798629481324.2732,
+        "g_surface_earth": 183346532245.0839,
+        "v_escape_c": 0.7041900370470106,
+        "ssz_test": {
+          "description": "Test SSZ via pulse profile modeling",
+          "gr_prediction": {
+            "z_surface": 0.4084278056220878,
+            "time_dilation": 0.7100115433735777
+          },
+          "ssz_model": {
+            "z_SSZ": "z_GR \u00d7 (1 + \u03b4_seg)",
+            "tau_SSZ": "\u03c4_GR \u00d7 (1 + \u03b4_seg)"
+          },
+          "observable": "Pulse profile shape depends on z and light bending",
+          "sensitivity": "\u03b4_seg detectable if > 2.4% of z_surface"
+        }
+      }
+    },
+    "J1614-2230": {
+      "info": {
+        "name": "PSR J1614-2230",
+        "type": "MSP in binary",
+        "period_ms": 3.15,
+        "distance_kpc": 1.3,
+        "mass_msun": 1.97,
+        "mass_err": [
+          0.04,
+          0.04
+        ],
+        "radius_km": null,
+        "reference": "Demorest+2010 (Nature 467, 1081)",
+        "arxiv": "1010.5788",
+        "ssz_relevance": "Very precise mass from Shapiro delay"
+      },
+      "ssz_quantities": null
+    },
+    "J0437-4715": {
+      "info": {
+        "name": "PSR J0437-4715",
+        "type": "MSP in binary",
+        "period_ms": 5.76,
+        "distance_kpc": 0.156,
+        "mass_msun": 1.44,
+        "mass_err": [
+          0.07,
+          0.07
+        ],
+        "radius_km": null,
+        "reference": "Reardon+2024",
+        "ssz_relevance": "Closest MSP, excellent timing"
+      },
+      "ssz_quantities": null
+    }
+  }
+}
