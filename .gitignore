@@ -35,10 +35,15 @@ ENV/
 .ipynb_checkpoints/
 
 # Data files (users download their own)
-data/schumann/
+data/schumann/raw/
+data/schumann/real/
+data/schumann/processed/
 data/space_weather/
 *.zip
 *.mat
+
+# Keep sample data for Colab
+!data/schumann/sample_schumann_2016.csv
 
 # Output files
 output/*.png
