@@ -66,13 +66,13 @@ def Xi_exponential(r: float, r_s: float, Xi_max: float = 0.802) -> float:
     """
     Exponential segment density (phi-based).
     
-    Xi(r) = Xi_max * (1 - exp(-phi * r / r_s))
+    Xi(r) = Xi_max * (1 - exp(-phi * r_s / r))
     
     From 01_MATHEMATICAL_FOUNDATIONS.md:
     - Universal crossover at r* = 1.386562 * r_s
     - Mass-independent!
     """
-    return Xi_max * (1 - np.exp(-phi * r / r_s))
+    return Xi_max * (1 - np.exp(-phi * r_s / r))
 
 
 def D_SSZ(r: float, r_s: float, xi_func: str = 'exponential', xi_max: float = 1.0) -> float:
@@ -125,7 +125,7 @@ def test_44_percent_prediction():
     "Bei r = 5r_s: Delta = (D_SSZ - D_GR)/D_GR x 100% = -44%"
     
     CORRECT FORMULA: D_SSZ = 1 / (1 + Xi)
-    with Xi = Xi_max * (1 - exp(-phi * r / r_s))
+    with Xi = Xi_max * (1 - exp(-phi * r_s / r))
     and Xi_max = 1.0
     """
     print("=" * 70)
@@ -348,7 +348,7 @@ def test_segment_saturation():
     """
     Test that segment density saturates.
     
-    With Xi = Xi_max * (1 - exp(-phi * r / r_s)):
+    With Xi = Xi_max * (1 - exp(-phi * r_s / r)):
     - Xi -> 0 as r -> 0
     - Xi -> Xi_max as r -> infinity
     - Xi is always bounded!
@@ -366,7 +366,7 @@ def test_segment_saturation():
     r_s = 2 * G * M / c**2
     
     print(f"Xi_max = {xi_max}")
-    print(f"Xi(r) = Xi_max * (1 - exp(-phi * r / r_s))")
+    print(f"Xi(r) = Xi_max * (1 - exp(-phi * r_s / r))")
     print()
     print(f"Xi(r) at various radii:")
     

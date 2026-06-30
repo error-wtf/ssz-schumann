@@ -302,7 +302,7 @@ def Xi_ssz(
     SSZ Segment Density Field (CORRECT formula from ssz-metric-pure).
     
     Formula:
-        Xi(r) = Xi_max * (1 - exp(-phi * r / r_s))
+        Xi(r) = Xi_max * (1 - exp(-phi * r_s / r))
     
     Properties:
         - Xi(0) = 0 (no segments at center)
@@ -321,7 +321,7 @@ def Xi_ssz(
         ssz-metric-pure/src/ssz_metric_pure/segmentation.py
     """
     r = np.asarray(r)
-    return Xi_max * (1 - np.exp(-PHI * r / r_s))
+    return Xi_max * (1 - np.exp(-PHI * r_s / r))
 
 
 def D_SSZ_from_Xi(
@@ -360,7 +360,7 @@ def phi_segment_density(
     Calculate phi-based segment density.
     
     From SSZ core theory (CORRECT):
-        Xi(r) = Xi_max * (1 - exp(-phi * r/r_s))
+        Xi(r) = Xi_max * (1 - exp(-phi * r_s / r))
     
     Args:
         r: Radius
@@ -374,8 +374,8 @@ def phi_segment_density(
         Prefer Xi_ssz() for the canonical implementation.
     """
     if model == "ssz_core":
-        # From ssz-metric-pure: Xi(r) = 1 - exp(-phi * r/r_s)
-        return 1 - np.exp(-PHI * r / r_s)
+        # From ssz-metric-pure: Xi(r) = 1 - exp(-phi * r_s / r)
+        return 1 - np.exp(-PHI * r_s / r)
     elif model == "linear":
         # Simple linear model (approximation for small r)
         return PHI * r / r_s

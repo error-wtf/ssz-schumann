@@ -6,7 +6,7 @@ SSZ Full Scale Test - From Earth to Supermassive Black Holes
 Tests the SSZ theory across ALL scales with the CORRECT formulas:
 - D_SSZ = 1 / (1 + Xi)
 - Xi (weak field) = r_s / (2r)
-- Xi (strong field) = Xi_max * (1 - exp(-phi * r / r_s))
+- Xi (strong field) = Xi_max * (1 - exp(-phi * r_s / r))
 
 (c) 2025 Carmen Wrede & Lino Casu
 Licensed under the ANTI-CAPITALIST SOFTWARE LICENSE v1.4
@@ -56,9 +56,9 @@ def Xi_weak_field(r: float, r_s: float) -> float:
 def Xi_strong_field(r: float, r_s: float, xi_max: float = XI_MAX) -> float:
     """
     Strong-field segment density.
-    Xi = Xi_max * (1 - exp(-phi * r / r_s))
+    Xi = Xi_max * (1 - exp(-phi * r_s / r))
     """
-    return xi_max * (1 - np.exp(-phi * r / r_s))
+    return xi_max * (1 - np.exp(-phi * r_s / r))
 
 
 def D_GR(r: float, r_s: float) -> float:
@@ -189,7 +189,7 @@ def run_full_scale_test():
     print("Testing SSZ predictions with CORRECT formulas:")
     print("  D_SSZ = 1 / (1 + Xi)")
     print("  Xi (weak) = r_s / (2r)")
-    print("  Xi (strong) = Xi_max * (1 - exp(-phi * r / r_s))")
+    print("  Xi (strong) = Xi_max * (1 - exp(-phi * r_s / r))")
     print()
     
     results = []

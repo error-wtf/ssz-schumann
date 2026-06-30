@@ -28,7 +28,7 @@
 **Python:**
 ```python
 def Xi_ssz(r, r_s, Xi_max=1.0):
-    return Xi_max * (1 - np.exp(-PHI * r / r_s))
+    return Xi_max * (1 - np.exp(-PHI * r_s / r))
 ```
 
 ---
@@ -162,7 +162,7 @@ D_SSZ = phi ** (-alpha * Xi)  # WRONG!
 ### CORRECT (new):
 ```python
 # CORRECT formula from ssz-metric-pure
-Xi = Xi_max * (1 - np.exp(-PHI * r / r_s))
+Xi = Xi_max * (1 - np.exp(-PHI * r_s / r))
 D_SSZ = 1.0 / (1.0 + Xi)
 ```
 

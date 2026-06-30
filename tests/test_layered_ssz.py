@@ -226,7 +226,7 @@ class TestPhiBasedSegmentation:
     
     def test_phi_segment_density_ssz_core(self):
         """Test SSZ core segment density formula."""
-        # Xi(r) = 1 - exp(-phi * r / r_s)
+        # Xi(r) = 1 - exp(-phi * r_s / r)
         r = 1.0
         r_s = 1.0
         

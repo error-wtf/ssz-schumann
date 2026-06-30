@@ -156,7 +156,7 @@ def ssz_em_metric(r, r_s, Xi_max=1.0):
     Die effektive Lichtgeschwindigkeit in SSZ:
         c_eff(r) = c / sqrt(1 + Xi(r))
     
-    wobei Xi(r) = Xi_max * (1 - exp(-phi * r/r_s))
+    wobei Xi(r) = Xi_max * (1 - exp(-phi * r_s / r))
     
     Für Schumann-Resonanzen:
         - r = Abstand vom Erdmittelpunkt
@@ -164,7 +164,7 @@ def ssz_em_metric(r, r_s, Xi_max=1.0):
         - Xi_max = maximale Segmentierung
     """
     phi = (1 + np.sqrt(5)) / 2  # Goldener Schnitt
-    Xi = Xi_max * (1 - np.exp(-phi * r / r_s))
+    Xi = Xi_max * (1 - np.exp(-phi * r_s / r))
     c_eff = C_LIGHT / np.sqrt(1 + Xi)
     return c_eff, Xi
 ```

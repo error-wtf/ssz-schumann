@@ -276,7 +276,7 @@ The transition occurs around r ~ 10×r_s where:
 
 2. **The same formula works from Earth to Black Holes**
    - Weak field: Xi ~ GM/(Rc²)
-   - Strong field: Xi ~ 1 - exp(-φr/r_s)
+   - Strong field: Xi ~ 1 - exp(-φr_s / r)
 
 3. **Strong-field tests are needed to detect SSZ**
    - Neutron stars (NICER): Delta ~ -28%

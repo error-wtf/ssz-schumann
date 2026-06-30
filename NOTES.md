@@ -39,7 +39,7 @@
 PHI = (1 + sqrt(5)) / 2  # ≈ 1.618
 
 # Segment Saturation
-Xi(r) = 1 - exp(-PHI * r / r_s)
+Xi(r) = 1 - exp(-PHI * r_s / r)
 
 # Time Dilation
 D_SSZ(r) = 1 / (1 + Xi(r))
@@ -191,7 +191,7 @@ wobei F_iono ein Ionosphären-Proxy ist (F10.7, Kp, D-Schicht-Höhe, etc.)
 
 ### 2025-12-08 04:00
 - SSZ-Kernformeln aus ssz-metric-pure integriert
-- Korrekte Formeln: Xi(r) = Xi_max * (1 - exp(-phi * r/r_s))
+- Korrekte Formeln: Xi(r) = Xi_max * (1 - exp(-phi * r_s / r))
 - Korrekte Zeitdilatation: D_SSZ = 1 / (1 + Xi)
 - 8 neue Tests für SSZ-Kernformeln
 - FutureWarnings behoben ('H' -> 'h')

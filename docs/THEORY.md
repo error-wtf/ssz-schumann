@@ -56,7 +56,7 @@ With eta ≈ 0.74, we get:
 The Segmented Spacetime (SSZ) theory proposes that spacetime is divided into discrete segments, with segment density depending on local conditions. The key parameter is:
 
 ```
-Xi(r) = 1 - exp(-phi * r / r_s)
+Xi(r) = 1 - exp(-phi * r_s / r)
 ```
 
 where:
@@ -229,7 +229,7 @@ std_rel = std([Delta_f_1/f_1, Delta_f_2/f_2, Delta_f_3/f_3])
 From ssz-metric-pure:
 
 ```
-Xi(r) = 1 - exp(-phi * r / r_s)
+Xi(r) = 1 - exp(-phi * r_s / r)
 ```
 
 ### 6.2 Time Dilation

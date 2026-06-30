@@ -238,7 +238,7 @@ def xi_exponential(r: float, r_s: float, xi_max: float = 0.802) -> float:
     """
     Exponential segment density (phi-based).
     
-    Xi(r) = Xi_max * (1 - exp(-phi * r / r_s))
+    Xi(r) = Xi_max * (1 - exp(-phi * r_s / r))
     
     Properties:
     - Universal crossover at r* = 1.386562 * r_s
