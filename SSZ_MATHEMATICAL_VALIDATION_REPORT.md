@@ -21,7 +21,7 @@ This report documents the complete mathematical validation of the SSZ (Segmented
 For compact objects (r ~ r_s):
 
 ```
-Xi(r) = Xi_max × (1 - exp(-φ × r / r_s))
+Xi(r) = Xi_max × (1 - exp(-φ × r_s / r))
 
 where:
   φ = (1 + √5) / 2 = 1.618034 (Golden Ratio)
@@ -230,7 +230,7 @@ D_SSZ ≈ D_GR ≈ 1 - GM/(Rc²)
 
 **Strong Field (r ~ r_s):**
 ```python
-Xi(r) = Xi_max × (1 - exp(-φ × r / r_s))
+Xi(r) = Xi_max × (1 - exp(-φ × r_s / r))
 D_SSZ = 1 / (1 + Xi)
 ```
 

@@ -174,7 +174,7 @@ D_SSZ = 1 / (1 + δ_SSZ)
 In älteren Implementierungen wurde für **alle** Objekte die Starkfeld-Formel verwendet:
 
 ```
-Xi(r) = Xi_max × (1 - exp(-φ × r / r_s))    ← FALSCH für Planeten!
+Xi(r) = Xi_max × (1 - exp(-φ × r_s / r))    ← FALSCH für Planeten!
 ```
 
 **Problem:** Für Planeten mit R >> r_s sättigt Xi → 1 → **völlig unphysikalisch**.
@@ -190,7 +190,7 @@ Xi(R) ≈ GM / (Rc²) = Kompaktheit
 #### Starkfeld (Neutronensterne, Schwarze Löcher)
 
 ```
-Xi(r) = Xi_max × (1 - exp(-φ × r / r_s))
+Xi(r) = Xi_max × (1 - exp(-φ × r_s / r))
 ```
 
 #### Zeitdilatation (universell)
@@ -301,7 +301,7 @@ D_SSZ = 1 / (1 + Xi)
 Xi = GM / (Rc²)
 
 # Starkfeld (r ~ r_s)  
-Xi = Xi_max × (1 - exp(-φ × r / r_s))
+Xi = Xi_max × (1 - exp(-φ × r_s / r))
 
 # Zeitdilatation (universell)
 D_SSZ = 1 / (1 + Xi)

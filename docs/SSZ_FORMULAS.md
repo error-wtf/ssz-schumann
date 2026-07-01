@@ -12,7 +12,7 @@
 
 **Exponential saturation model:**
 ```
-Ξ(r) = Ξ_max · (1 - exp(-φ · r/r_s))
+Ξ(r) = Ξ_max · (1 - exp(-φ · r_s / r))
 ```
 
 **Where:**

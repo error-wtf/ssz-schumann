@@ -245,7 +245,7 @@ def xi_exponential(r: float, r_s: float, xi_max: float = 0.802) -> float:
     - Mass-independent!
     - phi-based natural scale
     """
-    return xi_max * (1 - np.exp(-phi_golden * r / r_s))
+    return xi_max * (1 - np.exp(-phi_golden * r_s / r))
 
 
 def time_dilation_with_xi(r: float, M: float, xi_func: str = 'hyperbolic') -> float:
