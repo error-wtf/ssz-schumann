@@ -1,6 +1,6 @@
 # SSZ Detection Null Test Report
 
-**Generated:** 2026-07-01T00:12:54.179924
+**Generated:** 2026-07-01T02:00:30.719021
 
 ## Test Statistic Definition
 
@@ -28,17 +28,17 @@ which destroys any true temporal correlation while preserving marginal distribut
 
 | Metric | Value |
 |--------|-------|
-| T_SSZ (observed) | 0.6445 |
+| T_SSZ (observed) | 0.6424 |
 | P-value | 0.0010 |
 | Significant (α=0.05) | True |
-| Mean mode correlation | 0.6702 |
-| Scatter ratio | 0.4155 |
+| Mean mode correlation | 0.6680 |
+| Scatter ratio | 0.4173 |
 
 ## Interpretation
 
 **SSZ signature detected** at the 95% confidence level.
 
-The observed T_SSZ of 0.6445 exceeds 
+The observed T_SSZ of 0.6424 exceeds 
 the critical value from the null distribution (p = 0.0010).
 
 ---
